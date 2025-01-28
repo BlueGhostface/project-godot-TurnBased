@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqgdyxuvunbjw"]
+[gd_scene load_steps=6 format=3 uid="uid://bqgdyxuvunbjw"]
 
 [ext_resource type="Script" path="res://scripts/Game.cs" id="1_4y5tt"]
 [ext_resource type="PackedScene" uid="uid://b70cq7tt02nmw" path="res://Scenes/character.tscn" id="1_uyxv5"]
 [ext_resource type="Script" path="res://scripts/Label.cs" id="3_i01ly"]
+[ext_resource type="Texture2D" uid="uid://fac316qw2e2w" path="res://Assets/Final/Background_0.png" id="3_o3d4b"]
+[ext_resource type="Texture2D" uid="uid://ddl3uddnym1cq" path="res://Assets/icon.svg" id="5_2c6mn"]
 
-[node name="Game" type="Node2D"]
+[node name="Battle" type="Node2D"]
 script = ExtResource("1_4y5tt")
-
-[node name="Character" parent="." instance=ExtResource("1_uyxv5")]
 
 [node name="Interface" type="Control" parent="."]
 layout_mode = 3
@@ -21,3 +21,40 @@ offset_right = 38.0
 offset_bottom = 23.0
 text = "TEXT"
 script = ExtResource("3_i01ly")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_o3d4b")
+
+[node name="Character" parent="." instance=ExtResource("1_uyxv5")]
+position = Vector2(955, 405)
+scale = Vector2(3.32, 2.56)
+
+[node name="Sprite2D" type="Sprite2D" parent="Character"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_2c6mn")
+
+[node name="HeroLabel" type="Label" parent="Character"]
+offset_left = -8.73496
+offset_top = -26.9531
+offset_right = 29.265
+offset_bottom = -3.95313
+scale = Vector2(0.433919, 0.518491)
+text = "Hero"
+
+[node name="Enemy" parent="." instance=ExtResource("1_uyxv5")]
+position = Vector2(205, 402)
+scale = Vector2(3.32, 2.56)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_2c6mn")
+
+[node name="EnemyLabel" type="Label" parent="Enemy"]
+offset_left = -11.4458
+offset_top = -24.6094
+offset_right = 41.5542
+offset_bottom = -1.60936
+scale = Vector2(0.440478, 0.440478)
+text = "Enemy"

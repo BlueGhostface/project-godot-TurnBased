@@ -7,7 +7,7 @@ using System.Reflection.Metadata;
 public partial class Character : Node2D
 {
 
-	Random rnd;
+    readonly Random rnd;
 
 	//character stats
 	[Export] int max_hp = 10;
@@ -54,10 +54,10 @@ public partial class Character : Node2D
 	{
 		++Level;
 		Experience_required = Get_required_experience(Level);
-		levelupRandomStat();
+		LevelupRandomStat();
 	}
 
-	private void levelupRandomStat()
+	private void LevelupRandomStat()
 	{
 		int bonusIncrement = rnd.Next(2,6);
 
