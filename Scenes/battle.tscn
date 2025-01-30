@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://wry4qbf5v026"]
+
+[ext_resource type="PackedScene" uid="uid://cstnpw5oqvwu6" path="res://Scenes/window_default.tscn" id="1_bg4n2"]
+[ext_resource type="Texture2D" uid="uid://fac316qw2e2w" path="res://Assets/Final/Background_0.png" id="1_tjjlb"]
+
+[sub_resource type="Theme" id="Theme_oqlvr"]
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tjjlb")
+
+[node name="bottom" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -160.0
+offset_right = 480.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_oqlvr")
+theme_override_constants/separation = 4
+
+[node name="Left" parent="bottom" instance=ExtResource("1_bg4n2")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerStatWindow" parent="bottom" instance=ExtResource("1_bg4n2")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.6

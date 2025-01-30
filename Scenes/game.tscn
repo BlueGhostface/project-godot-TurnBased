@@ -9,6 +9,11 @@
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_4y5tt")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_o3d4b")
+
 [node name="Interface" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -21,11 +26,6 @@ offset_right = 38.0
 offset_bottom = 23.0
 text = "TEXT"
 script = ExtResource("3_i01ly")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("3_o3d4b")
 
 [node name="Character" parent="." instance=ExtResource("1_uyxv5")]
 position = Vector2(955, 405)
