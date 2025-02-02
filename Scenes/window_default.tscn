@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cstnpw5oqvwu6"]
+[gd_scene load_steps=3 format=3 uid="uid://cstnpw5oqvwu6"]
 
 [ext_resource type="Texture2D" uid="uid://c1kxoytnmrdkd" path="res://Assets/background window.png" id="1_bris5"]
+[ext_resource type="Script" path="res://scripts/HudPanel.cs" id="2_nc7ew"]
 
 [node name="Window_default" type="NinePatchRect"]
 texture = ExtResource("1_bris5")
@@ -8,3 +9,4 @@ patch_margin_left = 4
 patch_margin_top = 4
 patch_margin_right = 4
 patch_margin_bottom = 4
+script = ExtResource("2_nc7ew")
