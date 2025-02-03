@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/game.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+Glob="*res://scripts/Glob.cs"
+
 [dotnet]
 
 project/assembly_name="project cyber"
