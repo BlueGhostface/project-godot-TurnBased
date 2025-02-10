@@ -31,7 +31,7 @@ script = ExtResource("3_i01ly")
 position = Vector2(955, 405)
 scale = Vector2(3.32, 2.56)
 
-[node name="Sprite2D" type="Sprite2D" parent="Character"]
+[node name="Sprite2D2" type="Sprite2D" parent="Character"]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_2c6mn")
 
@@ -47,7 +47,7 @@ text = "Hero"
 position = Vector2(205, 402)
 scale = Vector2(3.32, 2.56)
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+[node name="Sprite2D2" type="Sprite2D" parent="Enemy"]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_2c6mn")
 
