@@ -10,6 +10,7 @@ public partial class OptionsMenu : Container
     public Action<BaseButton> ButtonFocused;
     public Action<BaseButton> ButtonPressed;
     
+    bool is_dummy = false;
 
 
     public Array<Node>  getButtons(){
@@ -24,4 +25,21 @@ public partial class OptionsMenu : Container
         }
 
     }
+    public override void _Ready()
+    {
+        SetProcessUnhandledInput(false);
+
+        if(!is_dummy){
+            
+            
+        }
+
+        if (is_dummy){
+            return;
+        }
+
+        connectToButton();
+    }
+
+
 }
