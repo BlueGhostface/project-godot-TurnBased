@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://wry4qbf5v026"]
+[gd_scene load_steps=12 format=3 uid="uid://wry4qbf5v026"]
 
 [ext_resource type="PackedScene" uid="uid://cstnpw5oqvwu6" path="res://Scenes/window_default.tscn" id="1_bg4n2"]
 [ext_resource type="Texture2D" uid="uid://fac316qw2e2w" path="res://Assets/Final/Background_0.png" id="1_tjjlb"]
-[ext_resource type="Script" path="res://Scenes/Battle.cs" id="1_x0gsx"]
+[ext_resource type="Script" uid="uid://3rebuocfk0u2" path="res://scripts/Battle.cs" id="1_x0gsx"]
 [ext_resource type="Texture2D" uid="uid://ddl3uddnym1cq" path="res://Assets/icon.svg" id="4_6hbgy"]
+[ext_resource type="Script" uid="uid://ly0qykbf3r7k" path="res://scripts/OptionsMenu.cs" id="4_ii8f4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ajjpl"]
 
@@ -88,6 +89,7 @@ offset_top = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
+script = ExtResource("4_ii8f4")
 
 [node name="Button" type="Button" parent="Options/OptionsMenu"]
 layout_mode = 2
