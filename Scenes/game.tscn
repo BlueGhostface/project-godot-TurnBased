@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqgdyxuvunbjw"]
 
-[ext_resource type="Script" path="res://scripts/Game.cs" id="1_4y5tt"]
+[ext_resource type="Script" uid="uid://btdyptqu7xfti" path="res://scripts/Game.cs" id="1_4y5tt"]
 [ext_resource type="PackedScene" uid="uid://b70cq7tt02nmw" path="res://Scenes/character.tscn" id="1_uyxv5"]
-[ext_resource type="Script" path="res://scripts/Label.cs" id="3_i01ly"]
+[ext_resource type="Script" uid="uid://djbip3myxx1y2" path="res://scripts/Label.cs" id="3_i01ly"]
 [ext_resource type="Texture2D" uid="uid://fac316qw2e2w" path="res://Assets/Final/Background_0.png" id="3_o3d4b"]
-[ext_resource type="Texture2D" uid="uid://ddl3uddnym1cq" path="res://Assets/icon.svg" id="5_2c6mn"]
+[ext_resource type="Texture2D" uid="uid://c1kxoytnmrdkd" path="res://Assets/background window.png" id="4_wowpa"]
 
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_4y5tt")
@@ -16,9 +16,10 @@ texture = ExtResource("3_o3d4b")
 
 [node name="Interface" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="Interface"]
 layout_mode = 0
@@ -27,13 +28,38 @@ offset_bottom = 23.0
 text = "TEXT"
 script = ExtResource("3_i01ly")
 
+[node name="MenuWindow" type="HBoxContainer" parent="Interface"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -8.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="options" type="NinePatchRect" parent="Interface/MenuWindow"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_wowpa")
+region_rect = Rect2(0, 0, 8, 8)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="statuses" type="NinePatchRect" parent="Interface/MenuWindow"]
+layout_mode = 2
+texture = ExtResource("4_wowpa")
+
 [node name="Character" parent="." instance=ExtResource("1_uyxv5")]
 position = Vector2(955, 405)
 scale = Vector2(3.32, 2.56)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Character"]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("5_2c6mn")
 
 [node name="HeroLabel" type="Label" parent="Character"]
 offset_left = -8.73496
@@ -46,10 +72,6 @@ text = "Hero"
 [node name="Enemy" parent="." instance=ExtResource("1_uyxv5")]
 position = Vector2(205, 402)
 scale = Vector2(3.32, 2.56)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Enemy"]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("5_2c6mn")
 
 [node name="EnemyLabel" type="Label" parent="Enemy"]
 offset_left = -11.4458
